@@ -1,0 +1,11 @@
+if(CONFIG_EXAMPLES_MYAPP)
+  nuttx_add_application(
+    NAME
+    ${CONFIG_EXAMPLES_MYAPP_PROGNAME}
+    SRCS
+    myapp_main.c
+    STACKSIZE
+    ${CONFIG_EXAMPLES_MYAPP_STACKSIZE}
+    PRIORITY
+    ${CONFIG_EXAMPLES_MYAPP_PRIORITY})
+endif()

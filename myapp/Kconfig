@@ -1,0 +1,24 @@
+config EXAMPLES_MYAPP
+	tristate "My app example"
+	default n
+	---help---
+		Enable the My app example
+
+if EXAMPLES_MYAPP
+
+config EXAMPLES_MYAPP_PROGNAME
+	string "Program name"
+	default "My app"
+	---help---
+		This is the name of the program that will be used when the NSH ELF
+		program is installed.
+
+config EXAMPLES_MYAPP_PRIORITY
+	int "My app task priority"
+	default 100
+
+config EXAMPLES_MYAPP_STACKSIZE
+	int "My app stack size"
+	default DEFAULT_TASK_STACKSIZE
+
+endif
